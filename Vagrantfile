@@ -24,6 +24,7 @@ Vagrant.configure("2") do |config|
     # Some VMs are borked on "serial console" so hard code this
     vb.customize ["modifyvm", :id, "--uart1", "0x3f8", "4"]
     vb.customize ["modifyvm", :id, "--uartmode1", "tcpserver", "2041"]
+    vb.customize ["modifyvm", :id, "--graphicscontroller", "vmsvga"]
   
   end
 
