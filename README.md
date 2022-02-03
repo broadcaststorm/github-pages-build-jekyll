@@ -32,3 +32,28 @@ $ vagrant ssh
   checked out site repository, make changes, and restart the Jekyll
   server.
 
+## Environment "Operational" Notes
+
+I am not a Ruby person and don't intend to learn any more than necessary
+as my focus is on other spaces. Yet, I still want a decent blog site that
+is free :)  So, below are notes to myself on how to do certain tasks with
+the website.
+
+- GitHub Pages only supports Ruby 2.x???
+    - Currently 2.7.3 (see GitHub repo below)
+    - [How to manually install Ruby](https://developer.fedoraproject.org/tech/languages/ruby/ruby-installation.html)
+
+- The theme is based on [Flexible Jekyll](https://github.com/artemsheludko/flexible-jekyll)
+
+- Gemfile.lock locks versions of the Ruby Gems, based around GitHub Pages gem.
+The latest version of github-pages can be determined at its
+[GitHub repo](https://github.com/github/pages-gem)
+
+- **bundle update** will install latest Ruby gems as specified (and/or restricted)
+by the specified Gemfile, placing the latest versions leveraged into the Gemfile.lock
+file.
+
+- When **bundle update github-pages** fails, it's typically because it is
+trying to compile code (no compilers in the Vagrant box).  Look for RPM
+packages as a substitute.
+
