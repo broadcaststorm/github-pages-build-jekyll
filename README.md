@@ -59,7 +59,7 @@ and launch the local Jekyll server.
 
 ```bash
 $ vagrant ssh
-[vagrant@localhost]$ cd broadcaststorm.github.io
+[vagrant@localhost]$ cd blog
 [vagrant@localhost]$ bundle exec jekyll serve --host=$MYHOST
 ```
 
