@@ -2,10 +2,6 @@
 
 cd $HOME
 
-echo "Configuring Git user information"
-git config --global user.name 'Tim Miller'
-git config --global user.email 'broadcaststorm@users.noreply.github.com'
-
 echo "Installing rbenv Git repo"
 git clone https://github.com/rbenv/rbenv.git $HOME/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> $HOME/.bashrc
