@@ -28,6 +28,18 @@ Vagrant.configure("2") do |config|
   
   end
 
+  config.vm.provider "vmware_desktop" do |vb|
+    # Display the VirtualBox GUI when booting the machine
+    vb.gui = false
+
+    # Specify VM memory requirements (MB)
+    vb.memory = "2048"
+
+    # Specify VM vCPUs
+    vb.cpus = 2
+
+  end
+
   # Provision the VM for a turnkey GitHub site development environment
   config.vm.provision "shell", inline: <<-SHELL
     dnf update -y
